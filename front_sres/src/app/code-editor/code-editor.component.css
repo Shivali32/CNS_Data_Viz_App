@@ -1,0 +1,37 @@
+/* code-editor.component.css */
+/* @import "~bootstrap/dist/css/bootstrap.min.css"; */
+
+/* Add some space around the container */
+/* .container {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  } */
+  
+  /* Make the code area look a bit more like a code editor */
+  textarea {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 16px;
+    background-color: #f4f4f4;
+    border: 1px solid #ddd;
+  }
+  
+  /* Style for the 'Generate Plot' button */
+  button {
+    font-size: 16px;
+    padding: 10px;
+  }
+  
+  /* Styling for the output section */
+  img {
+    max-height: 400px;
+    max-width: 100%;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+  }
+  
+  /* Ensure the iframe takes up the full width and is responsive */
+  iframe {
+    border: none;
+    border-radius: 8px;
+  }
+  
