@@ -17,9 +17,19 @@ from io import BytesIO
 os.makedirs('static', exist_ok=True)
 
 # USER CODE
-fig = figure(title="Bokeh Line Plot", x_axis_label='X', y_axis_label='Y', width=400, height=400)
-fig.line([1, 2, 3], [4, 5, 6], legend_label="Line 1", line_width=2)
+x = np.random.rand(100)
+y = np.random.rand(100)
+z = np.random.rand(100)
 
+fig = plt.figure()
+ax = fig.add_subplot(111, projection='3d')
+
+ax.scatter(x, y, z, c=z, cmap='viridis')
+
+ax.set_xlabel('X Axis')
+ax.set_ylabel('Y Axis')
+ax.set_zlabel('Z Axis')
+ax.set_title('3D Scatter Plot')
 
 # Try saving with matplotlib (PNG) as plot.png
 try:
@@ -34,7 +44,7 @@ try:
 <html>
 <head><title>Matplotlib Plot</title></head>
 <body>    
-    <img src="http://localhost:5000/static/plot.png" alt="Matplotlib Plot" width="400"/>
+    <img src="http://localhost:5000/static/plot.png" alt="Matplotlib Plot"/>
 </body>
 </html>
 """
