@@ -24,7 +24,7 @@ This project is a web application for executing and rendering **data visualizati
 - Flask
 - rpy2 (for R execution)
 - Python visualization libraries: Matplotlib, Seaborn, Plotly, Bokeh, Altair
-- R visualization libraries: ggplot2, lattice, rgl, plotly
+- R visualization libraries: ggplot2, lattice, rgl, plotly, vioplot
 
 ---
 
