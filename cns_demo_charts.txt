@@ -1,0 +1,92 @@
+Python Plot 1
+
+df = px.data.gapminder() 
+fig = px.bar(df, x='continent', y='pop', color='continent', title='Plotly Express Interactive Bar Chart')
+
+
+
+R Plot 2
+
+hist(rnorm(100), main="Base R Histogram", xlab="Value", col="lightblue", border="black")
+
+
+
+Python Plot 3
+
+x = np.random.rand(100)
+y = np.random.rand(100)
+z = np.random.rand(100)
+fig = plt.figure()
+ax = fig.add_subplot(111, projection='3d')
+
+ax.scatter(x, y, z, c=z, cmap='viridis')
+
+ax.set_xlabel('X Axis')
+ax.set_ylabel('Y Axis')
+ax.set_zlabel('Z Axis')
+ax.set_title('3D Scatter Plot')
+
+
+
+R Plot 4
+
+x <- rnorm(100)
+y <- rnorm(100)
+z <- rnorm(100)
+plot3d(x, y, z, col="blue", size=3, xlab="X", ylab="Y", zlab="Z")
+
+
+
+Python Plot 5
+
+data = pd.DataFrame({
+    'category': ['Apples', 'Oranges', 'Bananas', 'Grapes', 'Cherries', 'Mangoes', 'Pears', 'Peaches'],
+    'value': [12, 18, 15, 20, 8, 25, 10, 30]
+})
+
+chart = alt.Chart(data).mark_bar().encode(
+    x='category',
+    y='value'
+).properties(title="Altair Bar Chart with More Data Points", width=400)
+
+
+
+
+r plot 6
+x1 <- mtcars$mpg[mtcars$cyl==4]
+x2 <- mtcars$mpg[mtcars$cyl==6]
+x3 <- mtcars$mpg[mtcars$cyl==8]
+vioplot(x1, x2, x3, names=c("4 cyl", "6 cyl", "8 cyl"),
+   col="gold")
+title("Violin Plots")
+
+
+
+python plot 7
+np.random.seed(42)  
+x = np.random.randint(1, 100, size=50)  
+y = np.random.randint(1, 100, size=50)  
+
+fig = go.Figure(data=go.Scatter(x=x, y=y, mode='markers'))
+fig.update_layout(
+    title='Scatter Plot with Random Data Points using Plotly go',
+    xaxis_title='X Axis',
+    yaxis_title='Y Axis'
+)
+
+
+
+R plot 8
+data <- data.frame(
+x = c(324,432,354,350,234,453,876,523,456), 
+y = c(765,673,768,876,584,464,654,364,453))
+plot <- ggplot(data, aes(x=x, y=y)) +
+    geom_point(size = 5, shape = 21, color = "blue", fill = "lightblue", alpha = 0.7) +
+    ggtitle("ggplot2 Scatter Plot") +
+    xlab("X Axis") +
+    ylab("Y Axis")
+
+
+python plot 9
+fig = figure(title="Bokeh Line Plot", x_axis_label='X', y_axis_label='Y', width=400, height=400)
+fig.line([1, 2, 3], [4, 5, 6], legend_label="Line 1", line_width=2)
