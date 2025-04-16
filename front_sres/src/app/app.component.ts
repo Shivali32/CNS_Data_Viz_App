@@ -15,12 +15,11 @@ import { DomSanitizer, SafeUrl } from '@angular/platform-browser';
 })
 export class AppComponent {
     title = 'front_sres';
-    outputUrl: string = ''; // to store the image URL
-    outputHtmlUrl: string = ''; // to store the HTML URL
+    outputUrl: string = ''; 
+    outputHtmlUrl: string = '';
   
     constructor(private sanitizer: DomSanitizer) {}
-  
-    // Method to sanitize and trust the URLs
+      
     getSafeUrl(url: string): SafeUrl {
       return this.sanitizer.bypassSecurityTrustResourceUrl(url);
     }
